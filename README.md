@@ -6,7 +6,7 @@ A small library that implements linear algebra operations over the finite field 
 
 ---
 
-## 🌟 Features
+## Features
 
 - Vector and matrix operations in GF(2)
 - Support for basic linear algebra tasks:
@@ -18,7 +18,7 @@ A small library that implements linear algebra operations over the finite field 
 
 ---
 
-## 🚀 Installation
+## Installation
 
 Clone the repo and install locally:
 
