@@ -1,6 +1,6 @@
 [package]
 name = "gf2_lin_algebra"
-version = "0.1.1"
+version = "1.0.0"
 edition = "2024"
 authors = ["LucaBonamino"]
 description = "A linear algebra package to compute operations in GF(2)."
@@ -8,6 +8,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/LucaBonamino/gf2_lin_algebra"
 homepage = "https://github.com/LucaBonamino/gf2_lin_algebra"
+documentation = "https://LucaBonamino.github.io/gf2_lin_algebra/"
 categories = ["mathematics", "cryptography", "algebra"]
 keywords = ["linear-applications", "rank", "image", "kernel", "echelon-form", "linear-system-of-equations", "binary-field"]
 
