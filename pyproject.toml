@@ -3,7 +3,7 @@ requires = ["maturin>=1.10,<2.0"]
 build-backend = "maturin"
 
 [project]
-name = "lin_algebra_py"
+name = "gf2_lin_algebra"
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Rust",
