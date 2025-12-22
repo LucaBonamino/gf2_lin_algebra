@@ -1,6 +1,6 @@
 [package]
 name = "gf2_lin_algebra"
-version = "0.1.0"
+version = "0.1.0.post"
 edition = "2024"
 authors = ["LucaBonamino"]
 description = "A linear algebra package to compute operations in GF(2)."
