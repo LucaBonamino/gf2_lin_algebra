@@ -40,7 +40,7 @@ or clone the repo and install locally:
 git clone https://github.com/LucaBonamino/gf2_lin_algebra.git
 cd lin_algebra_py
 pip install .
-
+```
 
 ## Quick Example
 
