@@ -1,4 +1,5 @@
 site_name: gf2-lin-algebra
+site_url: https://LucaBonemino.github.io/gf2_lin_algebra/
 theme: readthedocs
 plugins:
   - mkdocstrings:

@@ -8,6 +8,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/LucaBonamino/gf2_lin_algebra"
 homepage = "https://github.com/LucaBonamino/gf2_lin_algebra"
+documentation = "https://LucaBonamino.github.io/gf2_lin_algebra/"
 categories = ["mathematics", "cryptography", "algebra"]
 keywords = ["linear-applications", "rank", "image", "kernel", "echelon-form", "linear-system-of-equations", "binary-field"]
 

@@ -1,5 +1,8 @@
 # gf2_lin_algebra
 
+[![Documentation](https://img.shields.io/badge/docs-online-blue)](https://LucaBonamino.github.io/gf2_lin_algebra/)
+
+
 **Python package for linear algebra operations in GF(2)**
 
 `gf2_lin_algebra` is a high-performance Python library for doing linear algebra over the **finite field GF(2)** (binary matrices and vectors).  

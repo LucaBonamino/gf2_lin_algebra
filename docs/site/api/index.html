@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://LucaBonemino.github.io/gf2_lin_algebra/api/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>API Reference - gf2-lin-algebra</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../assets/_mkdocstrings.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "API Reference";
+        var mkdocs_page_input_path = "api.md";
+        var mkdocs_page_url = "/gf2_lin_algebra/api/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> gf2-lin-algebra
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">gf2_lin_algebra</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">API Reference</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix">GF2Matrix</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.__doc__">__doc__</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.__module__">__module__</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.__new__">__new__</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.echelon_form">echelon_form</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.echelon_form--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.get_element">get_element</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.get_element--arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.get_element--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.image">image</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.image--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.is_reduced_echelon">is_reduced_echelon</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.is_reduced_echelon--returns">Returns:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.kernel">kernel</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.kernel--retuens">Retuens</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.ncols">ncols</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.ncols--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.nrows">nrows</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.nrows--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.rank">rank</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.rank--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.shape">shape</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.shape--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.solve">solve</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.solve--arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.solve--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.solve_matrix_system">solve_matrix_system</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.solve_matrix_system--arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.solve_matrix_system--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.to_list">to_list</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#gf2_lin_algebra.GF2Matrix.to_list--returns">Returns</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">gf2-lin-algebra</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">API Reference</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="api-reference">API Reference</h1>
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<a id="gf2_lin_algebra.GF2Matrix"></a>
+    <div class="doc doc-contents first">
+
+
+
+        <p>GF(2) matrix.</p>
+<p>This class exposes binary linear algebra over GF(2)
+implemented in Rust using PyO3.</p>
+
+
+
+
+
+
+
+
+
+
+<div class="doc doc-children">
+
+
+
+
+
+
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.__doc__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="vm">__doc__</span> <span class="o">=</span> <span class="s1">&#39;GF(2) matrix.</span><span class="se">\n\n</span><span class="s1">This class exposes binary linear algebra over GF(2)</span><span class="se">\n</span><span class="s1">implemented in Rust using PyO3.&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>str(object='') -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.<strong>str</strong>() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.__module__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="vm">__module__</span> <span class="o">=</span> <span class="s1">&#39;gf2_lin_algebra.gf2_lin_algebra&#39;</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-class-attribute"><code>class-attribute</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>str(object='') -&gt; str
+str(bytes_or_buffer[, encoding[, errors]]) -&gt; str</p>
+<p>Create a new string object from the given object. If encoding or
+errors is specified, then the object must expose a data buffer
+that will be decoded using the given encoding and error handler.
+Otherwise, returns the result of object.<strong>str</strong>() (if defined)
+or repr(object).
+encoding defaults to sys.getdefaultencoding().
+errors defaults to 'strict'.</p>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.__new__" class="doc doc-heading">
+            <code class="highlight language-python"><span class="fm">__new__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-builtin"><code>builtin</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Create and return a new object.  See help(type) for accurate signature.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.echelon_form" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">echelon_form</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute the echelon form of a GF2Matrix</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.echelon_form--returns">Returns</h3>
+<p>(GF2Matrix, list[tuple[int, int]]): The first element is the RREF form of the matrix and 
+the second is the history of the row operations applied to the matrix to compute the RREF.
+Each element of the row operations vector, is a tuple heving the modified row as first element and the row to which it has been summed as second element:
+    R1 -&gt; R1 + R2 is represented the entry (R1, R2)
+The swap of two rows is represented as 3 entries:
+    swap(R1, R2) is represented as (R1, R2), (R2,R1), (R1,R2)</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.get_element" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">get_element</span><span class="p">(</span><span class="n">row_idx</span><span class="p">,</span> <span class="n">column_idx</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the element of a GF2Matrix from the indexes.</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.get_element--arguments">Arguments</h3>
+<ul>
+<li><code>row_idx</code> - row index of the element</li>
+<li><code>column_idx</code> - column inde of the element</li>
+</ul>
+<h3 id="gf2_lin_algebra.GF2Matrix.get_element--returns">Returns</h3>
+<p>int: Value at selected position.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.image" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">image</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compute the base of the image of a GF2Matric</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.image--returns">Returns</h3>
+<p>List[list[int]]: Basis vector spanning the image.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.is_reduced_echelon" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">is_reduced_echelon</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Check if matrix is in reduced echelon form (RREF).</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.is_reduced_echelon--returns">Returns:</h3>
+<p>bool: True if matrix is in RREF, otherwise False.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.kernel" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">kernel</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compue the base otf the kernel of a GF2Matrix</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.kernel--retuens">Retuens</h3>
+<p>List[list[int]]: Basis vectors spanning the kernel.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.ncols" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">ncols</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the number or columns of a GF2Matrix.</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.ncols--returns">Returns</h3>
+<p>int: Number of columns of the GF2Matrix.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.nrows" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">nrows</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the number or rows of a PyGf2matrix.</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.nrows--returns">Returns</h3>
+<p>int: Number of rows of the GF2Matrix.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.rank" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">rank</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Compue the rank of a GF2Matrix</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.rank--returns">Returns</h3>
+<p>int: Rank of the matrix.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.shape" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">shape</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get the number of rows and columns of a GF2Matrix</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.shape--returns">Returns</h3>
+<p>Tuple(int, int): (number_of_rows, number_of_columns).</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.solve" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">solve</span><span class="p">(</span><span class="n">b</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Solve the system of linear equation defined by a GF2Matrix and a right-hand-side vector b.</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.solve--arguments">Arguments</h3>
+<ul>
+<li><code>b</code> - RHS vector of the system of equation</li>
+</ul>
+<h3 id="gf2_lin_algebra.GF2Matrix.solve--returns">Returns</h3>
+<p>List[int]: Solution vector.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.solve_matrix_system" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">solve_matrix_system</span><span class="p">(</span><span class="n">y</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Solve the system of equationd efines by the GF2Matrix and by a right hand side GF2Matrix.</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.solve_matrix_system--arguments">Arguments</h3>
+<ul>
+<li><code>ỳ</code>- RHS GF2Matrix</li>
+</ul>
+<h3 id="gf2_lin_algebra.GF2Matrix.solve_matrix_system--returns">Returns</h3>
+<p>GF2Matrix: Solution matrix.</p>
+
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h2 id="gf2_lin_algebra.GF2Matrix.to_list" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">to_list</span><span class="p">()</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-method descriptor"><code>method descriptor</code></small>
+  </span>
+
+</h2>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Convert PyGF2Matrix to vector of vectors.</p>
+<h3 id="gf2_lin_algebra.GF2Matrix.to_list--returns">Returns</h3>
+<p>List[List[int]] correspomding to the matrix elements</p>
+
+
+    </div>
+
+</div>
+
+
+
+  </div>
+
+    </div>
+
+
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="gf2_lin_algebra"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

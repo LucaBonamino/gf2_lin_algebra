@@ -13,3 +13,8 @@ classifiers = [
     "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dynamic = ["version"]
+
+[project.urls]
+Documentation = "https://lucabonamino.github.io/gf2_lin_algebra/
+Source = "https://github.com/LucaBonamino/gf2_lin_algebra"
+Issues = "https://github.com/LucaBonamino/gf2_lin_algebra/issues"
