@@ -1,0 +1,7 @@
+site_name: gf2-lin-algebra
+theme: readthedocs
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["."]

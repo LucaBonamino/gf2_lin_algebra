@@ -1,5 +1,5 @@
 import unittest
-from gf2_lin_algebra import PyGF2Matrix
+from gf2_lin_algebra import GF2Matrix
 
 class TestLinAlgebra(unittest.TestCase):
 
@@ -9,7 +9,7 @@ class TestLinAlgebra(unittest.TestCase):
             [1,1,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         self.assertEqual(m.to_list(), l)
 
     def test_nrows_ncols(self):
@@ -17,11 +17,11 @@ class TestLinAlgebra(unittest.TestCase):
             [1,1,0],
             [1,1,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         self.assertEqual(m.nrows(), 2)
         self.assertEqual(m.ncols(), 3)
 
-        m = PyGF2Matrix([])
+        m = GF2Matrix([])
         self.assertEqual(m.nrows(), 0)
         self.assertEqual(m.ncols(), 0)
 
@@ -30,7 +30,7 @@ class TestLinAlgebra(unittest.TestCase):
             [1,1,0],
             [1,1,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
 
         for i in range(2):
             for j in range(3):
@@ -42,7 +42,7 @@ class TestLinAlgebra(unittest.TestCase):
             [1,1,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         self.assertEqual(m.rank(), 2)
 
     
@@ -52,13 +52,13 @@ class TestLinAlgebra(unittest.TestCase):
             [1,1,1],
             [0,0,1]
         ]
-        self.assertFalse(PyGF2Matrix(l).is_reduced_echelon())
+        self.assertFalse(GF2Matrix(l).is_reduced_echelon())
 
         l = [
             [1,0,1],
             [0,1,0]
         ]
-        self.assertTrue(PyGF2Matrix(l).is_reduced_echelon())
+        self.assertTrue(GF2Matrix(l).is_reduced_echelon())
 
 
     def test_solve(self):
@@ -67,7 +67,7 @@ class TestLinAlgebra(unittest.TestCase):
             [1,0,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         b = [1, 0, 1]
         self.assertEqual(m.solve(b), [1,1,1])
 
@@ -83,8 +83,8 @@ class TestLinAlgebra(unittest.TestCase):
             [1,0,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
-        self.assertEqual(m.solve_matrix_system(PyGF2Matrix(y)).to_list(), [[1, 1, 0], [0, 1, 0], [0, 0, 1]])
+        m = GF2Matrix(l)
+        self.assertEqual(m.solve_matrix_system(GF2Matrix(y)).to_list(), [[1, 1, 0], [0, 1, 0], [0, 0, 1]])
 
     def test_kernel(self):
         l = [
@@ -92,7 +92,7 @@ class TestLinAlgebra(unittest.TestCase):
             [1,0,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         self.assertEqual(m.kernel(), [])
     
         l = [
@@ -100,7 +100,7 @@ class TestLinAlgebra(unittest.TestCase):
             [1,0,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         self.assertEqual(m.kernel(), [[0,1,0]])
 
 
@@ -110,5 +110,5 @@ class TestLinAlgebra(unittest.TestCase):
             [1,0,1],
             [0,0,1]
         ]
-        m = PyGF2Matrix(l)
+        m = GF2Matrix(l)
         self.assertEqual(m.image(), [[1, 0, 0], [0, 1, 0], [0, 0, 1]])
