@@ -1,5 +1,5 @@
 import unittest
-from lin_algebra_py import PyGF2Matrix
+from gf2_lin_algebra import PyGF2Matrix
 
 class TestLinAlgebra(unittest.TestCase):
 

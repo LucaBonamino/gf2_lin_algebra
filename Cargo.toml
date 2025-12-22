@@ -1,11 +1,19 @@
 [package]
-name = "lin_algebra_py"
+name = "gf2_lin_algebra"
 version = "0.1.0"
 edition = "2024"
+authors = ["LucaBonamino"]
+description = "A linear algebra package to compute operations in GF(2)."
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/LucaBonamino/gf2_lin_algebra"
+homepage = "https://github.com/LucaBonamino/gf2_lin_algebra"
+categories = ["mathematics", "cryptography", "algebra"]
+keywords = ["linear-applications", "rank", "image", "kernel", "echelon-form", "linear-system-of-equations", "binary-field"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [lib]
-name = "lin_algebra_py"
+name = "gf2_lin_algebra"
 crate-type = ["cdylib"]
 
 [dependencies]

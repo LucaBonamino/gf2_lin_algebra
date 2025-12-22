@@ -1,4 +1,4 @@
-# lin_algebra_py
+# gf2_lin_algebra
 
 **Python package for linear algebra operations in GF(2)**
 
@@ -20,9 +20,13 @@ A small library that implements linear algebra operations over the finite field 
 
 ## Installation
 
-Clone the repo and install locally:
+```bash
+pip install gf2_lin_algebra
+```
+
+or clone the repo and install locally:
 
 ```bash
-git clone https://github.com/LucaBonamino/lin_algebra_py.git
+git clone https://github.com/LucaBonamino/gf2_lin_algebra.git
 cd lin_algebra_py
 pip install .

@@ -9,6 +9,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c08606f8c3cbf4ce6ec8e28fb0014a2c086708fe954eaa885384a6165172e7e8"
 
 [[package]]
+name = "gf2_lin_algebra"
+version = "0.1.0"
+dependencies = [
+ "lin_algebra",
+ "pyo3",
+]
+
+[[package]]
 name = "heck"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -36,14 +44,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a736bc84157165f9892aaee19771941deaf6a9d326cf26ee8e6c193de1feed82"
 dependencies = [
  "num-traits",
-]
-
-[[package]]
-name = "lin_algebra_py"
-version = "0.1.0"
-dependencies = [
- "lin_algebra",
- "pyo3",
 ]
 
 [[package]]

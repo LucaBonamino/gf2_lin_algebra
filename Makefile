@@ -1,4 +1,4 @@
-PROJECT_NAME = lin_algebra_py
+PROJECT_NAME = gf2_lin_algebra
 
 PYTHON = python
 
