@@ -21,7 +21,7 @@ A small library that implements linear algebra operations over the finite field 
 ## Installation
 
 ```bash
-pip install gf2_lin_algebra
+pip install gf2-lin-algebra
 ```
 
 or clone the repo and install locally:
