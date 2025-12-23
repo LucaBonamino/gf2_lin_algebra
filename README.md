@@ -78,3 +78,8 @@ mat_y = GF2Matrixx([
 print(mat.solve_matrix_system(mat_y))
 
 ```
+
+## Contributing
+
+Contributions are welcome!
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
