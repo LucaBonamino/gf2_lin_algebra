@@ -79,6 +79,24 @@ print(mat.solve_matrix_system(mat_y))
 
 ```
 
+## Roadmap
+
+This package focuses on providing a **clean, user-friendly Python API** for linear algebra over GF(2).
+
+While performance is important, `gf2_lin_algebra` intentionally keeps a clear and debuggable implementation, suitable for learning, research, and experimentation.
+
+Planned directions include:
+- improving performance while preserving a readable, educational code path
+- exposing optimized operations implemented in the Rust crate
+  [`lin_algebra`](https://github.com/LucaBonamino/lin_algebra)
+- refining the Python API for clarity and consistency
+- adding examples, documentation, and tests
+
+Most low-level optimizations and algorithmic improvements are developed in the Rust backend. This package focuses primarily on usability and ergonomics for Python users.
+
+For a more detailed list of ideas and areas where help is welcome, see [ROADMAP.md](ROADMAP.md).
+
+
 ## Contributing
 
 Contributions are welcome!
