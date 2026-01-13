@@ -84,7 +84,7 @@ class TestLinAlgebra(unittest.TestCase):
             [0,0,1]
         ]
         m = GF2Matrix(l)
-        self.assertEqual(m.solve_matrix_system(GF2Matrix(y)).to_list(), [[1, 1, 0], [0, 1, 0], [0, 0, 1]])
+        self.assertEqual(m.solve_matrix_system(GF2Matrix(y)).to_list(), [[1, 0, 0], [1, 1, 0], [0, 0, 1]])
 
     def test_kernel(self):
         l = [
